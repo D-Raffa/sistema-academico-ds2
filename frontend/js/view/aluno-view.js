@@ -36,7 +36,7 @@ const AlunoView = {
 
     // pergunta se o usuario deseja realizar outro cadastro. 
 
-    perguntaNovoCadastro() {
+    perguntarNovoCadastro() {
         return confirm("Deseja cadastrar outro aluno ?");
     },
 

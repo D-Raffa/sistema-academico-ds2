@@ -30,7 +30,7 @@ const AlunoController = {
                 AlunoView.exibirAluno(resultado.aluno);
             } else {
                 // se resultado for false ele apresenta o erro identificado pelo model
-                AlunoView.exebirErro(resultado.mensagem);
+                AlunoView.exibirErro(resultado.mensagem);
             }
 
             //pergunra de o usuario deseja cadastrar um novo alunp
@@ -39,6 +39,10 @@ const AlunoController = {
 
 
         // esse pedaço ser executado apos o laço terminar, mostrara a lista de alunos cadastrados 
+        const alunos = AlunoModel.listar();
+        
+        
+        //envia a lista para a view
         AlunoView.exibirLista(alunos);
 
         // converte p array de alunos em um texto JSON
@@ -46,7 +50,7 @@ const AlunoController = {
 
 
         // solicita que a view apresente o texto JSON. 
-        AlunoView.exebirJson(textoJson);
+        AlunoView.exibirJson(textoJson);
 
         //Converte o texto json novemante em um valor javascript 
         const dadosRecuperados = JSON.parse(textoJson);
